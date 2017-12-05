@@ -5,7 +5,7 @@ $(document).ready(function(){
     $.each(item_data, function(key, value){
         if(key === "images") {
             $.each(value, function(index, img_dir){
-                var li_element = $("<li>").append($("<img>", {"id": "itemImage" + index, "src": img_dir}));
+                var li_element = $("<li>").append($("<img>", {"id": "itemImage" + index, "src": img_dir, "width": 500}));
                 $("#slider").append(li_element);
             });
         } else {
