@@ -1,6 +1,7 @@
 $(document).ready(function(){
-    var url = "https://raw.githubusercontent.com/parkland-CSC175/Fa17-AlexBai/master/final_project/monitor.json?token=ASdNDT1i5O9-_FlYHXyr1vX_5Os_if0sks5aLyTmwA%3D%3D";
+    var url = "616353553.github.io/monitor.json";
     $.get(url, function(data) {
+        console.log(typeof(data));
         var items = JSON.parse(data)["items"];
         $("#main").append($("<ul>", {"id": "items"}));
         $.each(items, function(index, value){
