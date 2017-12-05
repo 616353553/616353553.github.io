@@ -1,8 +1,7 @@
 $(document).ready(function(){
-    var url = "616353553.github.io/monitor.json";
+    var url = "https://616353553.github.io/monitor.json";
     $.get(url, function(data) {
-        console.log(typeof(data));
-        var items = JSON.parse(data)["items"];
+        var items = data["items"];
         $("#main").append($("<ul>", {"id": "items"}));
         $.each(items, function(index, value){
             $("#items").append($("<li>", {"id": "item" + index}));
@@ -17,21 +16,21 @@ $(document).ready(function(){
             $("#item" + index).append($("<section>", {"id": "buttons" + index}));
             $("#buttons" + index).append($("<input>", {"type": "button", "name": "Add to cart", "id": "add" + index, "value": "Add to cart"}));
             $("#add" + index).click(function(){
-                addToCart();
+                addToCart(value);
             });
             $("#buttons" + index).append($("<input>", {"type": "button", "name": "View detail", "id": "detail" + index, "value": "View detail"}));
             $("#detail" + index).click(function() {
-                viewDetail();
+                viewDetail(value);
             });
         });
 
     });
 });
 
-function viewDetail() {
-
+function viewDetail(item_data) {
+    window.location.replace("http://616353553.github.io/detail.html");
 }
 
-function addToCart() {
-
+function addToCart(item_data) {
+    
 }
