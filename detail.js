@@ -1,7 +1,5 @@
 $(document).ready(function(){
     var item_data = JSON.parse(localStorage.getItem("item_data"));
-    console.log(item_data);
-    console.log(typeof(item_data));
     $.each(item_data, function(key, value){
         if(key === "images") {
             $.each(value, function(index, img_dir){
