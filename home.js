@@ -28,8 +28,8 @@ $(document).ready(function(){
 });
 
 function viewDetail(item_data) {
+    localStorage.setItem("item_data", item_data);
     window.location.replace("https://616353553.github.io/detail.html");
-    
 }
 
 function addToCart(item_data) {
