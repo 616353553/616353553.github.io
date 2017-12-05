@@ -1,0 +1,87 @@
+{
+    "items":[
+        {
+            "title": "LG 27UD68-W",
+            "images": ["images/monitor0_0.jpg", "images/monitor0_1.jpg", "images/monitor0_2.jpg", "images/monitor0_3.jpg", "images/monitor0_4.jpg"],
+            "brand": "LG",
+            "resolution": "4k",
+            "FreeSync": true,
+            "G-Sync": false,
+            "size": 27,
+            "curved": false,
+            "price": 486.05,
+            "panel": "IPS"
+        },
+        {
+            "title": "LG 32UD89-W",
+            "images": ["images/monitor1_0.jpg", "images/monitor1_1.jpg", "images/monitor1_2.jpg", "images/monitor1_3.jpg", "images/monitor1_4.jpg"],            
+            "brand": "LG",
+            "resolution": "4k",
+            "FreeSync": true,
+            "G-Sync": false,
+            "size": 32,
+            "curved": false,
+            "price": 899.99,
+            "panel": "IPS"
+        },
+        {
+            "title": "HP Pavilion",
+            "images": ["images/monitor2_0.jpg", "images/monitor2_1.jpg"],            
+            "brand": "HP",
+            "resolution": "1920x1080",
+            "FreeSync": false,
+            "G-Sync": false,
+            "size": 21.5,
+            "curved": false,
+            "price": 89.99,
+            "panel": "LED"
+        },
+        {
+            "title": "Acer XFA240 bmjdpr",
+            "images": ["images/monitor3_0.jpg", "images/monitor3_1.jpg", "images/monitor3_2.jpg"],            
+            "brand": "Acer",
+            "resolution": "1920x1080",
+            "FreeSync": true,
+            "G-Sync": false,
+            "size": 24,
+            "curved": false,
+            "price": 199.99,
+            "panel": "TN"
+        },
+        {
+            "title": "Samsung C27F591",
+            "images": ["images/monitor4_0.jpg", "images/monitor4_1.jpg", "images/monitor4_2.jpg", "images/monitor4_3.jpg"],            
+            "brand": "Samsung",
+            "resolution": "1920x1080",
+            "FreeSync": true,
+            "G-Sync": false,
+            "size": 27,
+            "curved": true,
+            "price": 199.99,
+            "panel": "LED"
+        },
+        {
+            "title": "ASUS ROG SWIFT PG348Q",
+            "images": ["images/monitor5_0.jpg", "images/monitor5_1.jpg", "images/monitor5_2.jpg"],            
+            "brand": "Asus",
+            "resolution": "3440x1440",
+            "FreeSync": false,
+            "G-Sync": true,
+            "size": 34,
+            "curved": true,
+            "price": 1250.40,
+            "panel": "IPS"
+        },
+        {
+            "title": "ASUS ROG SWIFT PG278QR",
+            "images": ["images/monitor6_0.jpg", "images/monitor6_1.jpg", "images/monitor6_2.jpg", "images/monitor6_3.jpg"],            
+            "brand": "Asus",
+            "resolution": "2560x1440",
+            "FreeSync": false,
+            "G-Sync": true,
+            "size": 27,
+            "curved": false,
+            "price": 617.99,
+            "panel": "IPS"
+    }]
+}
