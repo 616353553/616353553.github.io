@@ -28,7 +28,7 @@ $(document).ready(function(){
 });
 
 function viewDetail(item_data) {
-    window.location.replace("http://616353553.github.io/detail.html");
+    window.location.replace("https://616353553.github.io/detail.html");
 }
 
 function addToCart(item_data) {
