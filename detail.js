@@ -32,7 +32,8 @@ $(document).ready(function(){
         slideWidth: 600,
         slideMargin: 10,
         randomStart: false,
-        pagerType: "short"
+        pagerType: "short",
+        infiniteLoop: false
     });
 
     $("#cart").click(function() {
