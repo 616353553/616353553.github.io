@@ -6,8 +6,10 @@ $(document).ready(function(){
     var items = null;
     $.get(url, function(data) {
         items = data["items"];
+        console.log(items);
     });
-
+    console.log(items);
+    
     // change html base on items data
     $.each(items, function(index, value){
         // create <li> for each item
