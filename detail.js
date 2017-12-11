@@ -36,6 +36,7 @@ $(document).ready(function(){
     });
 
     $("#cart").click(function() {
+        console.log("cart pushed");
         viewCart();
     });
 });
@@ -80,5 +81,6 @@ function viewCart() {
     } else {
         localStorage.setItem("cart", JSON.stringify(cart));
     }
+    console.log("navigate");
     window.location.href = "https://616353553.github.io/cart.html";
 }
