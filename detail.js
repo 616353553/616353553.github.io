@@ -1,4 +1,4 @@
-$(document).load(function(){
+$(window).load(function(){
     // click logo to return to home
     $("img").bind("click", function() {
         window.location.href = "https://616353553.github.io/index.html";
