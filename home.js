@@ -3,37 +3,31 @@ $(document).ready(function(){
 
     // create items and retrieve items data
     var url = "https://616353553.github.io/monitor.json";
-    var items = null;
     $.get(url, function(data) {
-        items = data["items"];
-        console.log(items);
-    });
-    console.log(items);
-    
-    // change html base on items data
-    $.each(items, function(index, value){
-        // create <li> for each item
-        $("#items").append($("<li>", {"id": "item" + index}));
+        $.each(data["items"], function(index, value){
+            // create <li> for each item
+            $("#items").append($("<li>", {"id": "item" + index}));
 
-        // add item's tile
-        $("#item" + index).append($("<h3>", {"text": "Title: " + value["title"]}));
-        // add item's first image
-        $("#item" + index).append($("<img>", {"id": "itemImage" + index, "src": value["images"][0], "width": 500}));
-        // add item's price
-        $("#item" + index).append($("<h3>", {"text": "Price: " + value["price"]}));
+            // add item's tile
+            $("#item" + index).append($("<h3>", {"text": "Title: " + value["title"]}));
+            // add item's first image
+            $("#item" + index).append($("<img>", {"id": "itemImage" + index, "src": value["images"][0], "width": 500}));
+            // add item's price
+            $("#item" + index).append($("<h3>", {"text": "Price: " + value["price"]}));
 
-        // add two buttons for item
-        $("#item" + index).append($("<section>", {"id": "buttons" + index}));
+            // add two buttons for item
+            $("#item" + index).append($("<section>", {"id": "buttons" + index}));
 
-        // add to cart button
-        $("#buttons" + index).append($("<input>", {"type": "button", "name": "Add to cart", "id": "add" + index, "value": "Add to cart"}));
-        $("#add" + index).click(function(){
-            addToCart(value);
-        });
-        // view detail button
-        $("#buttons" + index).append($("<input>", {"type": "button", "name": "View detail", "id": "detail" + index, "value": "View detail"}));
-        $("#detail" + index).click(function() {
-            viewDetail(value);
+            // add to cart button
+            $("#buttons" + index).append($("<input>", {"type": "button", "name": "Add to cart", "id": "add" + index, "value": "Add to cart"}));
+            $("#add" + index).click(function(){
+                addToCart(value);
+            });
+            // view detail button
+            $("#buttons" + index).append($("<input>", {"type": "button", "name": "View detail", "id": "detail" + index, "value": "View detail"}));
+            $("#detail" + index).click(function() {
+                viewDetail(value);
+            });
         });
     });
 
