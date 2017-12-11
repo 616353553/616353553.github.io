@@ -27,7 +27,6 @@ $(document).ready(function(){
 
     $("#slider").bxSlider({
         auto: false,
-        minSlides: 1,
         maxSlides: 1,
         moveSlides: 1,
         slideWidth: 600,
