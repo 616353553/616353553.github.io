@@ -5,6 +5,7 @@ $(document).ready(function(){
     var url = "https://616353553.github.io/monitor.json";
     var items = null;
     $.get(url, function(data) {
+        console.log(data);
         var items = data["items"];
     });
     console.log(items);
