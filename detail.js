@@ -1,7 +1,12 @@
-$(document).ready(function(){
+$(window).on("load", function(){
     // click logo to return to home
     $("img").bind("click", function() {
         window.location.href = "https://616353553.github.io/index.html";
+    });
+    // enable cart button
+    $("#cart").click(function() {
+        console.log("cart pushed");
+        viewCart();
     });
 
     // update cart count
@@ -34,11 +39,6 @@ $(document).ready(function(){
         randomStart: false,
         pagerType: "short",
         infiniteLoop: false
-    });
-
-    $("#cart").click(function() {
-        console.log("cart pushed");
-        viewCart();
     });
 });
 
