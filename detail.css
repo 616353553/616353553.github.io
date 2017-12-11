@@ -1,0 +1,43 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 87.5%;
+	width: 650px;
+	/* margin: 0 auto; */
+	padding: 15px 25px;	
+}
+h1 { 
+	font-size: 150%;
+	margin-bottom: .5em;
+}
+h3 { 
+	font-weight: normal;
+}
+ul {
+	padding-left: 45px;
+}
+p {
+	padding-bottom: .5em;
+}
+ul {
+	list-style-type: none;
+}
+img {
+	width: auto;
+	max-height: 600px;
+}
+input {
+	margin-right: 20px;
+	margin-top: 20px;
+}
+#cart {
+	font-size: 20px;
+	border-radius: 8px;
+	margin-left: 200px;
+	margin-top: 20px;
+	height: 40px;
+	width: 120px;
+}

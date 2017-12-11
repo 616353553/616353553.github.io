@@ -1,9 +1,18 @@
 $(document).ready(function(){
+    // click logo to return to home
+    $("img").bind("click", function() {
+        window.location.href = "https://616353553.github.io/index.html";
+    });
+
+    // update cart count
+    updateCartCount();
+
+    // retrieve item data
     var item_data = JSON.parse(localStorage.getItem("item_data"));
     $.each(item_data, function(key, value){
         if(key === "images") {
             $.each(value, function(index, img_dir){
-                var li_element = $("<li>").append($("<img>", {"id": "itemImage" + index, "src": img_dir, "width": 500}));
+                var li_element = $("<li>").append($("<img>", {"id": "itemImage" + index, "src": img_dir, "width": 600}));
                 $("#slider").append(li_element);
             });
         } else {
@@ -13,7 +22,7 @@ $(document).ready(function(){
     });
     $("#main").append($("<input>", {"type": "button", "name": "Add to cart", "id": "add", "value": "Add to cart"}));
     $("#add").click(function(){
-        //addToCart(value);
+        addToCart(item_data);
     });
 
     $("#slider").bxSlider({
@@ -26,4 +35,51 @@ $(document).ready(function(){
         randomStart: false,
         pagerType: "short"
     });
+
+    $("#cart").click(function() {
+        viewCart();
+    });
 });
+
+function addToCart(item_data) {
+    var cart = JSON.parse(localStorage.getItem("cart"));
+    if (cart === null) {
+        cart = {};
+        cart[item_data['title']] = {"data": item_data, "count": 1};
+    } else {
+        if (cart[item_data["title"]] === undefined) {
+            cart[item_data["title"]] = {"data": item_data, "count": 1};
+        } else {
+            cart[item_data["title"]]["count"] += 1;
+        }
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartCount();
+}
+
+function updateCartCount() {
+    // retrieve cart data
+    var cart = {}
+    if (localStorage.getItem("cart") !== null) {
+        cart = JSON.parse(localStorage.getItem("cart"));
+    } else {
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }
+    // update "in cart" count
+    var count = 0;
+    $.each(cart, function(key, value) {
+        count += cart[key]["count"];
+    });
+    $("#cart").text('In Cart(' + count + ')');
+}
+
+function viewCart() {
+    // retrieve cart data
+    var cart = {}
+    if (localStorage.getItem("cart") !== null) {
+        cart = JSON.parse(localStorage.getItem("cart"));
+    } else {
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }
+    window.location.href = "https://616353553.github.io/cart.html";
+}

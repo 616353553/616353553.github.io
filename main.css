@@ -22,7 +22,7 @@ ul {
 li {
 	padding-bottom: .5em;
 	margin: 80px;
-	width: 600px;
+	/* width: 600px; */
 }
 p {
 	padding-bottom: .5em;
@@ -32,13 +32,13 @@ ul {
 }
 img {
 	width: auto;
-	max-height: 100%;
+	max-height: 600px;
 }
 input {
 	margin-right: 20px;
 	margin-top: 20px;
 }
-button {
+#cart {
 	font-size: 20px;
 	border-radius: 8px;
 	margin-left: 200px;
