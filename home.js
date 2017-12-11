@@ -5,10 +5,8 @@ $(document).ready(function(){
     var url = "https://616353553.github.io/monitor.json";
     var items = null;
     $.get(url, function(data) {
-        console.log(data);
         items = data["items"];
     });
-    console.log(items);
 
     // change html base on items data
     $.each(items, function(index, value){
