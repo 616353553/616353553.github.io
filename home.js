@@ -7,6 +7,7 @@ $(document).ready(function(){
     $.get(url, function(data) {
         var items = data["items"];
     });
+    console.log(items);
 
     // change html base on items data
     $.each(items, function(index, value){
