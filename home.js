@@ -6,7 +6,7 @@ $(document).ready(function(){
     var items = null;
     $.get(url, function(data) {
         console.log(data);
-        var items = data["items"];
+        items = data["items"];
     });
     console.log(items);
 
